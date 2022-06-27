@@ -1,18 +1,11 @@
-import { useEffect } from 'react';
-
+import CharacterList from './components/CharacterList';
 function app(){
-
-  useEffect(()=>{
-    async function fetchData(){
-      const response = await fetch('https://rickandmortyapi.com/api/character');
-      const data = await response.json();
-      console.log(data);
-    }
-    fetchData()
-      
-  },[])
-  return(
-    <h1>holaa</h1>
-  )
+  
+  return <div>
+      <h1>Rick and Morty</h1>
+      <CharacterList/>
+  </div>
 }
 export default app
+
+
